@@ -16,4 +16,6 @@ object MyPath {
 
     const val TEST_API = "testApi/{$NAME}"
 
+    const val GET_BOOK = "getBook"
+
 }

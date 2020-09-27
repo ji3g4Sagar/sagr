@@ -7,4 +7,6 @@ import org.springframework.stereotype.Service
 interface IHelloWorldService {
 
     fun helloWorld(name: String): String
+
+    fun getBook(bookdId: String?, bookName: String?, auth: String)
 }

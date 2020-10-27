@@ -18,16 +18,4 @@ class HelloWorldService @Autowired constructor(
 
         return ("Hello! " +name+". Have good day!")
     }
-
-    override fun getBook(bookdId: String?, bookName: String?, auth: String) {
-        /*@ResponseStatus(HttpStatus.OK)
-        @GetMapping(value = "/v1/book", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-        List<Book> getAll() {
-            return bookRepository.findAll();
-        }*/
-    }
-
-
-
-
 }

@@ -4,6 +4,7 @@ import com.example.sagar.controller.inf.IMyApi
 import com.example.sagar.controller.path.MyPath
 import com.example.sagar.service.helloWorld.IHelloWorldService
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
@@ -11,7 +12,8 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 class MyController @Autowired constructor(
-        private val helloWorld: IHelloWorldService
+        @Qualifier("IHelloWorldService") val helloWorld: IHelloWorldService
+
 ):IMyApi {
 
     override fun hello(
@@ -19,12 +21,7 @@ class MyController @Autowired constructor(
         return helloWorld.helloWorld(name)
     }
 
-    override fun getBook(
-            @RequestParam bookId: String?,
-            @RequestParam name: String?,
-            @RequestParam author: String?) {
 
-    }
 
 
 }
